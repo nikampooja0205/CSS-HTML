@@ -1,0 +1,134 @@
+<html>
+<head>
+<title> LOG IN </title>
+<style type="text/css">
+body{
+	background:url(a2.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	font-family: sans-serif;
+	padding:70px 30px;
+	padding: 0;
+	height: 100px;
+	width: 200px;
+}
+.loginbox{
+	
+	width: 300PX;
+	height: 300px;
+	background: #000;
+	color: #fff;
+	top: 100%;
+	left:50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	padding: 70px 30px;
+	align-self:center;
+
+}
+
+h1{
+	margin: 0;
+	padding: 20px;
+	text-align: center;
+	font-size: 30px;
+	font-family: calibri;
+}
+.loginbox p{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+loginbox input{
+	width: 100%;
+	margin-bottom: 20px;
+}
+.loginbox input[type="text"],input[type="password"]
+{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 50px;
+	color: #fff;
+	font-size: 15px;
+}
+.loginbox input[type="submit"]
+{
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #fb2525;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 15px;
+	border-width: 500px;
+	align-self:center;
+}
+.loginbox input[type="submit"]:hover
+{
+	cursor: pointer;
+	background: #ffc107;
+	color: #000;
+}
+.loginbox a{
+	text-decoration: none;
+	font-size: 12px;
+	line-height: 30px;
+	color: blue;
+}
+loginbox a:hover
+{
+	color: #ffc107;
+}
+</style>
+
+<script type="text/javascript">
+	function validation(){
+		if(document.form.uname.value == "")
+		{
+alert("Enter your Username.");
+document.form.uname.focus();
+return false;
+		}
+		if(document.form.pwd.value == "")
+		{
+alert("Enter your Password.");
+document.form.uname.focus();
+return false;
+		}
+		if(document.form.uname.value == "demo" && document.form.pwd.value == "demo")
+		{
+alert("Login successful.");
+return false;
+		}
+		else{
+			alert("Enter correct login details.")
+			return false;
+		}
+	}
+	</script>
+</head>
+<body>
+<div class="loginbox">
+
+<h1>LOG IN</h1>
+<form name="login" method="POST" action="login1"onsubmit="return validation()" >
+<p>Username</p>
+<input type="text" name="uname" placeholder="Enter Username">
+<p>Password</p>
+<input type="password" name="pwd" placeholder="Enter password">
+<a href="#">
+<div>
+<input class="checkbox" id="ckb1" type="checkbox" name="remember-me">
+<label class="label-checkbx" for="ckb1">Remember me</label></a><br>
+</div>
+<div>
+<input type="submit" name="" size="100"  value="Login" style="text-align:center;">
+</div>
+<a href="#"style="text-align:center;"> forgot password </a>
+</form>
+
+</body>
+</html>
